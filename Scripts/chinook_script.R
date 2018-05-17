@@ -1,4 +1,4 @@
-library(dplyr)
+library(tidyverse)
 chinook_data <- read.csv("Data/OnHatcheryMortalityFigure.csv")
 View(chinook_data)
 
@@ -6,10 +6,6 @@ View(chinook_data)
 
 
 #Create one bar graph for each brood year, where each histogram has one column per averaged density (low,medium,high)
-library(tidyverse)
-
-
-View(chinook_data)
 
 ggplot(chinook_data) + 
   geom_bar(aes(x=Density, y=Percent.Mortality, color=Density)) +    
