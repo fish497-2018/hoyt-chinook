@@ -30,12 +30,13 @@ ggplot(chinook_data) +
 
 #this should work
 ggplot(chinook_data, aes(Density, Percent.Mortality)) +
-geom_bar(stat = "summary", fun.y = "mean") +
-  facet_wrap(~Broodyear)
+geom_bar(stat = "identity") +
+  facet_wrap(~Broodyear) 
+  
 
 
 
 
 #code to group by density
 group_by(chinook_data, Density) %>%
-  summarize(Mortality = mean(Percent.Mortality)) 
+  summarize(Mortality = mean(Percent.Mortality))
