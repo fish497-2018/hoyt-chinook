@@ -30,7 +30,7 @@ ggplot(chinook_data) +
 
 #this should work
 ggplot(chinook_data, aes(Density, Percent.Mortality)) +
-geom_bar(stat = "identity") +
+geom_bar(stat = "summary", fun.y = "mean") +
   facet_wrap(~Broodyear)
 
 
