@@ -11,6 +11,18 @@ ggplot(chinook_data) +
   geom_bar(aes(x=Density, y=Percent.Mortality, color=Density)) +    
   facet_wrap(~Broodyear)
 
+library(tidyverse)
+ggplot(chinook_data) + 
+  geom_bar(aes(x=Density, y=Percent.Mortality)) 
+  
+ggplot(chinook_data) + 
+  geom_point(aes(x=Density, y=Percent.Mortality)) +
+  facet_wrap(~Broodyear) 
+
+
+ 
+
+  
 
 
 
