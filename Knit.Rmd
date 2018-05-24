@@ -12,9 +12,8 @@ library(dplyr)
 library(ggplot2)
 ```
 
-summary(chinook_data)
 
-## Plot the Juvenile Chinook data by brood year.
+## Renaming data file
 ```{r}
 chinook_data <- read.csv("Data/OnHatcheryMortalityFigure.csv")
 ```
