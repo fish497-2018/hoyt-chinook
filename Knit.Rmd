@@ -7,7 +7,7 @@ output: html_document
 
 ## Required Packages
 
-```{r, include=FALSE}
+```{r}
 library(dplyr)
 library(ggplot2)
 ```
