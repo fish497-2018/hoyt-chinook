@@ -12,12 +12,13 @@ library(dplyr)
 library(ggplot2)
 ```
 
-summary(chinook_data)
 
 ## Plot the Juvenile Chinook data by brood year.
 ```{r}
 chinook_data <- read.csv("Data/OnHatcheryMortalityFigure.csv")
 ```
+
+
 
 
 >deleted from chunk: message=FALSE, echo=FALSE, cache=TRUE
