@@ -16,7 +16,7 @@ summary(chinook_data)
 
 ## Plot the Juvenile Chinook data by brood year.
 ```{r}
-chinookdata <- read.csv(desktop/hoyt-chinook/data/"OnHatcheryMortalityFigure.csv")
+chinookdata <- read.csv("Data/OnHatcheryMortalityFigure.csv")
 ```
 
 ```{r, message=FALSE, echo=FALSE, cache=TRUE}
