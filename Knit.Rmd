@@ -1,0 +1,28 @@
+---
+title: "Juvenile Chinook Mortality"
+author: "Tyler Hoyt"
+date: "5/23/2018"
+output: html_document
+---
+
+## Required Packages
+
+```{r}
+library(dplyr)
+library(ggplot2)
+```
+
+summary(chinook_data)
+
+## Plot the Juvenile Chinook data by brood year.
+```{r}
+chinookdata <- read.csv(desktop/hoyt-chinook/data/"OnHatcheryMortalityFigure.csv")
+```
+
+```{r, message=FALSE, echo=FALSE, cache=TRUE}
+ggplot(chinook_data, aes(Density, Percent.Mortality)) +
+  geom_bar(stat = "summary", fun.y = "mean") +
+  facet_wrap(~Broodyear) +
+  labs(x = "Density", y = "Average Mortality %") +
+  ggtitle("Juvenile Chinook Mortality") 
+```
