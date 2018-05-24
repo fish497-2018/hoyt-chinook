@@ -18,7 +18,12 @@ library(ggplot2)
 chinook_data <- read.csv("Data/OnHatcheryMortalityFigure.csv")
 ```
 
-```{r, message=FALSE, echo=FALSE, cache=TRUE}
+
+
+
+>deleted from chunk: message=FALSE, echo=FALSE, cache=TRUE
+
+```{r}
 ggplot(chinook_data, aes(Density, Percent.Mortality)) +
   geom_bar(stat = "summary", fun.y = "mean") +
   facet_wrap(~Broodyear) +
