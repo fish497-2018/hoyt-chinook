@@ -1,0 +1,19 @@
+---
+title: "Chinook markdown"
+author: "Tyler Hoyt"
+date: "5/25/2018"
+output: html_document
+---
+
+
+```{r}
+chinook_data <- read.csv("Data/OnHatcheryMortalityFigure.csv")
+```
+
+```{r}
+ggplot(chinook_data, aes(Density, Percent.Mortality)) +
+  geom_bar(stat = "summary", fun.y = "mean") +
+  facet_wrap(~Broodyear) +
+  labs(x = "Density", y = "Average Mortality %") +
+  ggtitle("Juvenile Chinook Mortality") 
+```

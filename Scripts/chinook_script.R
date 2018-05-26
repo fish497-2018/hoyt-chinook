@@ -47,4 +47,7 @@ group_by(chinook_data, Density) %>%
 ggplot(chinook_data, aes(Density, Percent.Mortality)) +
   geom_bar(stat = "summary", fun.y = "mean") +
   facet_wrap(~Broodyear) +
-  labs(x = "Density", y = "Average Mortality %")
+  labs(x = "Density", y = "Average Mortality %")+
+  ggsave("Figures/chinook_data.jpeg")
+  
+
