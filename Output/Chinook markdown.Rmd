@@ -5,11 +5,19 @@ date: "5/25/2018"
 output: html_document
 ---
 
-
+## Required packages
 ```{r}
-chinook_data <- read.csv("Data/OnHatcheryMortalityFigure.csv")
+library(dplyr)
+library(ggplot2)
 ```
 
+
+##Bring Chinook data into R studio
+```{r}
+chinook_data <-  read.csv("Data/OnHatcheryMortalityFigure.csv")
+```
+
+## Plotting Juvenille Chinook Mortality
 ```{r}
 ggplot(chinook_data, aes(Density, Percent.Mortality)) +
   geom_bar(stat = "summary", fun.y = "mean") +
@@ -17,3 +25,4 @@ ggplot(chinook_data, aes(Density, Percent.Mortality)) +
   labs(x = "Density", y = "Average Mortality %") +
   ggtitle("Juvenile Chinook Mortality") 
 ```
+[^1]:Graphs are seperated by brood year
