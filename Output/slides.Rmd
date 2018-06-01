@@ -1,0 +1,45 @@
+---
+title: "Juvenile Chinook Density Dependance"
+author: "Tyler Hoyt"
+date: "5/29/2018"
+output:
+  ioslides_presentation: default
+  slidy_presentation: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+
+## Introduction
+
+Three brood years of hatchery juvenile chinook were examined for mortality rates at different population densities
+- Low Density
+- Medium Density
+- High Density
+
+### Juvenile Chinook
+
+![Juvenile Chinook](Chinookphoto.jpg)
+
+
+## Prediction
+
+Higher densities of juvenile  chinook will have higher mortality rates
+
+### Code Used
+
+ggplot(chinook_data, aes(Density, Percent.Mortality)) +
+  geom_bar(stat = "summary", fun.y = "mean") +
+  facet_wrap(~Broodyear) +
+  labs(x = "Density", y = "Average Mortality %") +
+  ggtitle("Juvenile Chinook Mortality")
+
+## Population Density vs. Mortality
+
+![](hoyt-chinook/figures/chinook_data.jpeg)
+
+
+
+
